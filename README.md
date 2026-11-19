@@ -9,14 +9,14 @@ En veckokalender i Java och Swing.
 ## Klasser (G-R2)
 
 - **Main:** Programmets start. Här ligger main som bara startar fönstret (GritCalendarGUI).
-- **Activity:** En aktivitet. Den vet sitt namn och ger ut det via getNameOfActiviyu () och den vet sin färg som den ger
+- **Activity:** En aktivitet. Den vet sitt namn och ger ut det via getNameOfActivity () och den vet sin färg som den ger
   ut via getColor ().
 - **TrainingActivity, SchoolActivity, MeetingActivity:** Dom ärver Activity. Dom skriver över toString () så att typen
   står före namnet (t.ex. "Träning: Gym") och getColor () så att varje typ har sin egen färg.
 - **GritCalendar:** Programmets hjärna. Håller koll på vilka aktiviteter som hör till vilket datum med en HashMap. Har
   metoderna för att lägga till och ta bort aktiviteter, räkna ut veckans datum, bläddra veckor och veckonummer.
 - **GritCalendarGUI:** Fönstret. Visar veckan, hanterar knapparna och frågar användaren efter namn, datum och typ.
--
+
 
 ## Klassdiagram
 
@@ -79,7 +79,7 @@ hämta
 listan (value) som hör till datumet (key).
 
 För att göra om det till en månadsvy hade jag behövt ändra variabeln som håller koll på måndagen i varje vecka
-(getMondayOfShownWeek), så att
+(mondayOfShownWeek), så att
 den i stället håller koll på första datumet i varje månad. I GUI:t hade jag i stället för en rad med 7 kolumner haft en
 GridLayout med 7 kolumner och 5–6 rader, då hade jag kunnat göra kalendern i samma stil som den jag har i telefonen
 (Apple kalender). Mina metoder till HashMap hade
